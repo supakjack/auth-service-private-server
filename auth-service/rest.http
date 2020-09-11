@@ -1,0 +1,90 @@
+### GET 
+GET http://localhost:3000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk3MTkxNjAsImV4cCI6MTU5OTcxOTIyMCwiYXVkIjoiNWY1OWFlYmIzZDk2N2U0Mjg0NDZhZjE4IiwiaXNzIjoiamFja21vYmlsZS5jb20ifQ.3gcZMjcn909mauFOASAIChMZplk5Tusd4sBUvF_i1-w
+
+### POST 
+POST http://localhost:3000/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk3MTQxMTcsImV4cCI6MTU5OTcxNDE3NywiYXVkIjoiNWY1OWFlYmIzZDk2N2U0Mjg0NDZhZjE4IiwiaXNzIjoiamFja21vYmlsZS5jb20ifQ.NEPxZOpWWzvstNPYdT1i1hiWPbLykiwUczEGgxh46-s
+
+{
+    "username": "not4",
+    "password": "not4@123",
+    "status" : "use",
+    "services": [
+        {"name": "joget","role": "user","status" : "use"},
+        {"name": "osdev","role": "user","status" : "use"}
+    ]
+}
+
+### PUT 
+PUT http://localhost:3000/user/first
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk3MTQxMTcsImV4cCI6MTU5OTcxNDE3NywiYXVkIjoiNWY1OWFlYmIzZDk2N2U0Mjg0NDZhZjE4IiwiaXNzIjoiamFja21vYmlsZS5jb20ifQ.NEPxZOpWWzvstNPYdT1i1hiWPbLykiwUczEGgxh46-s
+
+{
+    "username": "firstr",
+    "password": "firstr@123",
+    "status" : "use",
+    "services": [
+        {"name": "joget","role": "user"},
+        {"name": "osdev","role": "admin"}
+    ]
+}
+
+### POST 
+POST http://localhost:3000/service
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk3MTQxMTcsImV4cCI6MTU5OTcxNDE3NywiYXVkIjoiNWY1OWFlYmIzZDk2N2U0Mjg0NDZhZjE4IiwiaXNzIjoiamFja21vYmlsZS5jb20ifQ.NEPxZOpWWzvstNPYdT1i1hiWPbLykiwUczEGgxh46-s
+
+{
+    "name": "buu",
+    "role": "user",
+    "status" : "use"
+}
+
+### GET 
+GET http://localhost:3000/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk3MTQyMTcsImV4cCI6MTU5OTcxNDI3NywiYXVkIjoiNWY1OWFlYmIzZDk2N2U0Mjg0NDZhZjE4IiwiaXNzIjoiamFja21vYmlsZS5jb20ifQ.AL4pMEngxUSIQej-K244FLi-HErSvrhZoAaPuiC3rIA
+
+
+### POST 
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk3MTQyMTcsImV4cCI6MTU5OTcxNDI3NywiYXVkIjoiNWY1OWFlYmIzZDk2N2U0Mjg0NDZhZjE4IiwiaXNzIjoiamFja21vYmlsZS5jb20ifQ.AL4pMEngxUSIQej-K244FLi-HErSvrhZoAaPuiC3rIA
+
+{
+    "username": "phurkeiei",
+    "password": "phurkeiei@123"
+}
+
+### POST 
+POST http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk3MTkxNjAsImV4cCI6MTYzMTI3Njc2MCwiYXVkIjoiNWY1OWFlYmIzZDk2N2U0Mjg0NDZhZjE4IiwiaXNzIjoiamFja21vYmlsZS5jb20ifQ.LYG42k0i2rN-XZlmVzC-2dssQJGk7jiB1R8DevKRsi0"
+}
+
+### POST 
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk3MTkwMTIsImV4cCI6MTYzMTI3NjYxMiwiYXVkIjoiNWY1OWFlYmIzZDk2N2U0Mjg0NDZhZjE4IiwiaXNzIjoiamFja21vYmlsZS5jb20ifQ.T9PBLAV_SZrDW8fsMgZdzAw0vxp20UJrGljXpA0ksoM"
+}
+
+### POST private
+POST http://localhost:3000/private
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1OTk3OTk3MTEsImV4cCI6MTU5OTgwMDAxMSwiYXVkIjoiNWY1OWFlYmIzZDk2N2U0Mjg0NDZhZjE4IiwiaXNzIjoiamFja21vYmlsZS5jb20ifQ.tQP7iRJivdmNDEngGoQ614K7oLjUGQW_N1vEnmGOg3w
+
+
+### POST 
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "notto",
+    "password": "notto@123"
+}
